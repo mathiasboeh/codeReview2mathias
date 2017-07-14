@@ -1,94 +1,102 @@
 $font_family_1: helvetica;
 $background_color_1: yellow;
 $background_color_2: blue;
-
-
 body {
-	margin: auto;
-	font-family: $font_family_1;
-	display: flex;
-	flex-direction: column;
-	width: 900px;
-	border: black 5px solid;
+    margin: auto;
+    font-family: $font_family_1;
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    border: black 5px solid;
 }
+
 #inner {
-	margin: auto;
+    margin: auto;
 }
+
 header {
-	text-align: center;
+    text-align: center;
 }
+
 #play {
-	margin: auto;
-	display: flex;
-	flex-direction: row;
-	width: 900px;
-	border-top: black 3px solid;
-	border-bottom: black 3px solid;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    border-top: black 3px solid;
+    border-bottom: black 3px solid;
 }
+
 #play1 {
-	padding-left: 3px;
-	width: 450px;
-	border-right: black 3px solid;
+    padding-left: 3px;
+    width: 450px;
+    border-right: black 3px solid;
 }
+
 #play2 {
-	padding-left: 3px;
-	width: 450px;
+    padding-left: 3px;
+    width: 450px;
 }
+
 .dice {
-	width: 32px;
-	border: #999 2px solid;
-	padding: 10px;
-	font-size: 24px;
-	text-align: center;
-	margin: 5px;
+    width: 32px;
+    border: #999 2px solid;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    margin: 5px;
 }
+
 #winner {
-	text-align: center;
-	font-size: 2em;
+    text-align: center;
+    font-size: 2em;
 }
+
 
 /*breakpoints*/
+
 @media only screen and (max-width: 900px) {
-	#inner {
-		min-width: 100%;
-	}
-	header {
-		min-width: 100%;
-	}
-	#play {
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		background-color: $background_color_1;
-	}
-	.flexitem {
-		width: 50%;
-	}
-	#winner {
-		min-width: 100%;
-	}
+    #inner {
+        min-width: 100%;
+    }
+    header {
+        min-width: 100%;
+    }
+    #play {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        background-color: $background_color_1;
+    }
+    .flexitem {
+        width: 50%;
+    }
+    #winner {
+        min-width: 100%;
+    }
 }
+
 @media only screen and (max-width: 640px) {
-	#inner {
-		min-width: 100%;
-	}
-	header {
-		min-width: 100%;
-	}
-	#play {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		background-color: $background_color_2;
-	}
-	.flexitem {
-		min-width: 100%;
-	}
-	#play1 {
-		border-bottom: black 3px solid;
-		border-right: none;
-	}
-	#winner {
-		min-width: 100%;
-	}
+    #inner {
+        min-width: 100%;
+    }
+    header {
+        min-width: 100%;
+    }
+    #play {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: $background_color_2;
+    }
+    .flexitem {
+        min-width: 100%;
+    }
+    #play1 {
+        border-bottom: black 3px solid;
+        border-right: none;
+    }
+    #winner {
+        min-width: 100%;
+    }
 }
