@@ -7,6 +7,10 @@ document.getElementById("name2").innerHTML = "Player 2: " + Player2;
 
 //roll-dice
 
+function rolling(){
+var d = Math.floor(Math.random() * 6) + 1;
+return d;
+}
 
 //roll Player1
 function rollDice() {
@@ -14,11 +18,11 @@ function rollDice() {
     var dice2 = document.getElementById("dice2");
     var dice3 = document.getElementById("dice3");
      
-     d1 = Math.floor(Math.random() * 6) + 1;
-     d2 = Math.floor(Math.random() * 6) + 1;
-     d3 = Math.floor(Math.random() * 6) + 1;
+     var d1 = rolling();
+     var d2 = rolling();
+     var d3 = rolling();
     
-     diceTotal1 = d1 + d2 + d3;
+     diceTotal1 = d1 + d2 + d3;//global variable
 
 document.getElementById("dice1").innerHTML = d1;
 document.getElementById("dice2").innerHTML = d2;
@@ -28,17 +32,20 @@ document.getElementById("status1").innerHTML = diceTotal1;
 
     }
 
+
+
+
 //roll player2
 function rollDice2() {
     var dice4 = document.getElementById("dice4");
     var dice5 = document.getElementById("dice5");
     var dice6 = document.getElementById("dice6");
      
-     d4 = Math.floor(Math.random() * 6) + 1;
-     d5 = Math.floor(Math.random() * 6) + 1;
-     d6 = Math.floor(Math.random() * 6) + 1;
+     var d4 = rolling();
+     var d5 = rolling();
+     var d6 = rolling();
     
-     diceTotal2 = d4 + d5 + d6;
+     diceTotal2 = d4 + d5 + d6;//global variable
 
 document.getElementById("dice4").innerHTML = d4;
 document.getElementById("dice5").innerHTML = d5;
