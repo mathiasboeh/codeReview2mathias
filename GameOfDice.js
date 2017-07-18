@@ -1,9 +1,18 @@
+
+
 //Player names
-var Player1 = prompt("Player 1, please enter your name!");
+
+var Player1 = prompt("Player 1, please enter your name!");//"Text.prompt" does not allow second prompt to load
+
 var Player2 = prompt("Player 2, please enter your name!");
 
 document.getElementById("name1").innerHTML = "Player 1: " + Player1;
 document.getElementById("name2").innerHTML = "Player 2: " + Player2;
+
+//Title
+var title = ["Game","of","Dice"];
+document.getElementById("title1").innerHTML = title.join("   ");
+
 
 //roll-dice
 

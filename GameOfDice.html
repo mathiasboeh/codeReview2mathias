@@ -1,61 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Game of Dice</title>
-	<!--<link rel="stylesheet" href="GameOfDice.css">-->
-	<link rel="stylesheet" href="GameofDice.scss">
-	<script src="GameOfDice.js" type="text/javascript" charset="utf-8" async defer></script>
-
+    <title>Game of Dice</title>
+    <!--<link rel="stylesheet" href="GameOfDice.css">-->
+    <link rel="stylesheet" href="GameofDice.scss">
+    <script src="GameOfDice.js" type="text/javascript" charset="utf-8" async defer></script>
 </head>
-<body onload ="randomColor();">
 
-
-<div id="inner">
-<div><header id="header" class=""><h1>Game of Dice</h1>
-<h2>Take turns!</h2>
-	
-</header><!-- /header -->
-	
-</div>
-<div id="play">
-<div id="play1" class="flexitem"><h2 id="name1"></h2>
-<div class="wrapper">
-		<div class="column">
-				<div id="dice1" class="dice">0</div>
-				<div id="dice2" class="dice">0</div>
-				<div id="dice3" class="dice">0</div>
-		</div>
-		<div class="column">
-				<button onclick="rollDice()">roll dice</button>
-				<h2 id="status1">sum</h2>
-		</div>
-</div>
-	
-</div>
-<div id="play2" class="flexitem"><h2 id="name2"></h2>
-<div class="wrapper">
-		<div class="column">
-				<div id="dice4" class="dice">0</div>
-				<div id="dice5" class="dice">0</div>
-				<div id="dice6" class="dice">0</div>
-		</div>
-		<div class="column">
-				<button onclick="rollDice2()">roll dice</button>
-				<h2 id="status2">sum</h2>
-		</div> 
-</div> 
-
-
-</div>
-</div>
-
-</div>
-	<div id="result">
-	<button onclick="winner1()">Winner</button>
-
-<p id="winner">Winner</p>
-
-		
-	</div>
+<body onload="randomColor();">
+    <div id="inner">
+        <div>
+            <header id="header" class="">
+                <h1 id="title1"></h1>
+                <h2>Take turns!</h2>
+            </header>
+            <!-- /header -->
+        </div>
+        <div id="play">
+            <div id="play1" class="flexitem">
+                <h2 id="name1"></h2>
+                <div class="wrapper">
+                    <div class="column">
+                        <div id="dice1" class="dice">0</div>
+                        <div id="dice2" class="dice">0</div>
+                        <div id="dice3" class="dice">0</div>
+                    </div>
+                    <div class="column">
+                        <button onclick="rollDice()">roll dice</button>
+                        <h2 id="status1">sum</h2>
+                    </div>
+                </div>
+            </div>
+            <div id="play2" class="flexitem">
+                <h2 id="name2"></h2>
+                <div class="wrapper">
+                    <div class="column">
+                        <div id="dice4" class="dice">0</div>
+                        <div id="dice5" class="dice">0</div>
+                        <div id="dice6" class="dice">0</div>
+                    </div>
+                    <div class="column">
+                        <button onclick="rollDice2()">roll dice</button>
+                        <h2 id="status2">sum</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="result">
+        <button id="win" onclick="winner1()">Check who won!</button>
+        <p id="winner">Winner</p>
+    </div>
 </body>
+
 </html>
