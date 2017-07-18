@@ -13,57 +13,61 @@ function rollDice() {
     var dice1 = document.getElementById("dice1");
     var dice2 = document.getElementById("dice2");
     var dice3 = document.getElementById("dice3");
-    status1 = document.getElementById("status1"); //global
-    var d1 = Math.floor(Math.random() * 6) + 1;
-    var d2 = Math.floor(Math.random() * 6) + 1;
-    var d3 = Math.floor(Math.random() * 6) + 1;
+     
+     d1 = Math.floor(Math.random() * 6) + 1;
+     d2 = Math.floor(Math.random() * 6) + 1;
+     d3 = Math.floor(Math.random() * 6) + 1;
+    
+     diceTotal1 = d1 + d2 + d3;
 
-    dice1.innerHTML = d1;
-    dice2.innerHTML = d2;
-    dice3.innerHTML = d3;
+document.getElementById("dice1").innerHTML = d1;
+document.getElementById("dice2").innerHTML = d2;
+document.getElementById("dice3").innerHTML = d3;
+document.getElementById("status1").innerHTML = diceTotal1;
+    
 
-    var diceTotal1 = d1 + d2 + d3;
-
-    status1.innerHTML = "You rolled a " + diceTotal1 + "!";
-
-}
+    }
 
 //roll player2
 function rollDice2() {
     var dice4 = document.getElementById("dice4");
     var dice5 = document.getElementById("dice5");
     var dice6 = document.getElementById("dice6");
-    status2 = document.getElementById("status2"); //global
-    var d4 = Math.floor(Math.random() * 6) + 1;
-    var d5 = Math.floor(Math.random() * 6) + 1;
-    var d6 = Math.floor(Math.random() * 6) + 1;
+     
+     d4 = Math.floor(Math.random() * 6) + 1;
+     d5 = Math.floor(Math.random() * 6) + 1;
+     d6 = Math.floor(Math.random() * 6) + 1;
+    
+     diceTotal2 = d4 + d5 + d6;
 
-    dice4.innerHTML = d4;
-    dice5.innerHTML = d5;
-    dice3.innerHTML = d6;
+document.getElementById("dice4").innerHTML = d4;
+document.getElementById("dice5").innerHTML = d5;
+document.getElementById("dice6").innerHTML = d6;
+document.getElementById("status2").innerHTML = diceTotal2;
+    
 
-    status2.innerHTML = "You rolled a " + diceTotal2 + "!";
+    }
 
-}
+   
+    function winner1(){
+    	if(diceTotal1>diceTotal2){
+    	 document.getElementById("winner").innerHTML = "Player1 has won!";
+    	}
+    	if(diceTotal1<diceTotal2){
+    	document.getElementById("winner").innerHTML = "Player2 has won!";
+    	}
+    	if(diceTotal1==diceTotal2){
+    	document.getElementById("winner").innerHTML = "We have a draw! Try again!";
+    	}
 
-//winner statement
-if (status1 > status2) {
-    document.getElementById('winner').innerHTML = "Player 1 is the winner!";
-}
-if (status1 < status2) {
-    document.getElementById('winner').innerHTML = "Player 2 is the winner!";
-}
-if (status1 == status2) {
-    document.getElementById('winner').innerHTML = "No winner!";
-}
+    }
 
 
-//randomColor for the div inner. Copy/Paste from yesterday, not working anyways...
-function randomColor() {
-    var r = Math.floor(Math.random() * 256);
-    var g = Math.floor(Math.random() * 256);
-    var b = Math.floor(Math.random() * 256);
-    var erg = "rgb(" + r + "," + g + "," + b + ")";
-    document.getElementById('inner').style.background = erg;
 
+function randomColor(){
+	var r=Math.floor(Math.random()*256);
+    var g=Math.floor(Math.random()*256);
+    var b=Math.floor(Math.random()*256);
+    var erg= "rgb("+r+","+g+","+b+")";
+    document.body.style.backgroundColor=erg;
 }

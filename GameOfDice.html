@@ -7,10 +7,12 @@
 	<script src="GameOfDice.js" type="text/javascript" charset="utf-8" async defer></script>
 
 </head>
-<body>
+<body onload ="randomColor();">
+
 
 <div id="inner">
 <div><header id="header" class=""><h1>Game of Dice</h1>
+<h2>Take turns!</h2>
 	
 </header><!-- /header -->
 	
@@ -24,7 +26,7 @@
 				<div id="dice3" class="dice">0</div>
 		</div>
 		<div class="column">
-				<button onclick class="rollDice()">roll dice</button>
+				<button onclick="rollDice()">roll dice</button>
 				<h2 id="status1">sum</h2>
 		</div>
 </div>
@@ -38,7 +40,7 @@
 				<div id="dice6" class="dice">0</div>
 		</div>
 		<div class="column">
-				<button onclick class="rollDice2()">roll dice</button>
+				<button onclick="rollDice2()">roll dice</button>
 				<h2 id="status2">sum</h2>
 		</div> 
 </div> 
@@ -49,7 +51,10 @@
 
 </div>
 	<div id="result">
-<p id=winner>Winner</p>
+	<button onclick="winner1()">Winner</button>
+
+<p id="winner">Winner</p>
+
 		
 	</div>
 </body>
